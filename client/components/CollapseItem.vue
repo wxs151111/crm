@@ -1,15 +1,12 @@
 <template>
   <div>
-  <div class="card-header" @click="toggle">
- {{title}}
-        </div>
+    <div class="card-header" @click="toggle">
+     {{title}}
+    </div>
     <div v-show="isActive" @click="selected" class="card-content">
-
-
-  <slot name="content" ></slot>
-
+     <slot name="content" ></slot>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -27,13 +24,10 @@ export default {
     }
   },
   mounted () {
-
     this.$on('open', this.$parent.openByIndex)
         if (this.isActive) {
-          console.log("``isActive:``")
-      this.$emit('open', this.index)
+          this.$emit('open', this.index)
     }
-
   },
   computed: {
     index () {
@@ -41,12 +35,11 @@ export default {
     }
   },
   methods:{
-  selected (){
-  alert("selected:"+this.index)
-  },
+    selected (){
+      alert("selected:"+this.index)
+    },
     toggle () {
       if ((this.isActive = !this.isActive)) {
-      console.log("emit:open")
         this.$emit('open',this.index)
       }
     }
@@ -55,22 +48,14 @@ export default {
 </script>
 
 <style>
-
 .card-content {
-font-size: 5rem;
+    font-size: 5rem;
     padding-top: 0;
     padding-bottom: 0;
     overflow: hidden;
   }
-.card-content-box {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .card-header {
-font-size: 3rem;
+.card-header {
+    font-size: 3rem;
     white-space:nowrap;
-
   }
-
 </style>
