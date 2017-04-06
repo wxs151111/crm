@@ -1,10 +1,10 @@
 <template>
- <div>
-   <div class="title"> 
-    {{title}}
+  <div>
+    <div class="title"> 
+      {{title}}
+    </div>
+    <slot></slot>
   </div>
-  <slot></slot>
-</div> 
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
   methods:{
     openByIndex (index) {
       if (this.accordion) {
-        this.$children[index].isActive=true         
+        this.$children[index].isActive=true       
         if(this.currentItem >-1 && this.currentItem !==index){
           this.$children[this.currentItem].isActive=false
         }
@@ -27,11 +27,12 @@ export default {
   }
 }
 </script>
+
 <style>
 .title {
-  font-size: 3rem;
-  height:5rem;
-  padding:1rem;
-  background-color: #f0f0f0;
-}
+    font-size: 3rem;
+    height:5rem;
+    padding:1rem;
+    background-color: #f0f0f0;
+  }
 </style>
