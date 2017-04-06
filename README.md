@@ -1,5 +1,21 @@
 # crm
 
+Employee List component:
+client\components\Collapse
+client\components\CollapseItem
+
+- Each item has an employee name and bio content.
+
+- By default, bio content is hidden.
+
+- By clicking on the employee name, it expands/collapses the item's bio content.
+
+- Only one item can be expanded at a time (expanding one will collapse the others).
+
+- Additionally by clicking on the content, an action occurs (can be an alert with item data).
+
+
+
 To start:
 
 ```bash
