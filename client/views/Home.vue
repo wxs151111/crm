@@ -1,16 +1,10 @@
 <template>
   <div>
-    <Collapse accordion title="Employee List">
-  
-    <CollapseItem v-for="item in employeelist" :title="item.name">
-
-
-<div slot="content">{{item.content}}</div>
-
-    </CollapseItem>
-
+    <Collapse accordion title="Employee List"> 
+      <CollapseItem v-for="item in employeelist" :title="item.name">
+        <div slot="content">{{item.content}}</div>
+      </CollapseItem>
     </Collapse>
-
   </div>
 </template>
 
@@ -20,20 +14,21 @@ import CollapseItem from 'components/CollapseItem'
 
 export default {
   data() {
-  return {
-    employeelist:[{
-    name:'Rex Wang',content:'content 1'
-    },{
-    name:'Jim Zhang',content:'content 2'
-    }]
-    }
-  },
+    return {
+      employeelist:[{
+        name:'Rex Wang',
+        content:'content 1'
+        }, {
+        name:'Jim Zhang',
+        content:'content 2'
+        }]
+      }
+    },
   components: {
     Collapse,
     CollapseItem
   }
 }
-
 </script>
 <style>
 .item-content{
