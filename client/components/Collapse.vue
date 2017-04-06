@@ -3,9 +3,8 @@
    <div class="title"> 
     {{title}}
   </div>
- <slot></slot>
-    </div>
-  
+  <slot></slot>
+</div> 
 </template>
 
 <script>
