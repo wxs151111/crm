@@ -9,6 +9,9 @@ client\components\Collapse
 client\components\CollapseItem
 
 
+Function:
+
+
 - Each item has an employee name and bio content.
 
 - By default, bio content is hidden.
