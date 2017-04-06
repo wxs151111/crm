@@ -1,8 +1,13 @@
 # crm
 
 Employee List component:
+
+
 client\components\Collapse
+
+
 client\components\CollapseItem
+
 
 - Each item has an employee name and bio content.
 
