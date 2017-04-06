@@ -32,6 +32,6 @@ export default {
   font-size: 3rem;
   height:5rem;
   padding:1rem;
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 </style>
